@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mirna Vidović - moj html dokument</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+		<style>
+		html, body {
+			/*slikica*/
+			background-image: 
+    		url('slike/slika01.jpg');
+      		background-repeat: no-repeat;
+      		background-size: cover;
+      		background-position: center;
+	  		background-attachment: fixed;
+      
+     background-color: #511e70;
+      color: #FCEFFF;
+		}
+
+		/* dark overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    /* tekst ide preko */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+	 /* link */
+    a {
+      color: #3a005e;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #7c00c9;
+    }
+
+	  p { font-family: 'Schibsted Grotesk'; }
+	  .prva-lista {
+  font-family: 'Arial';
+  list-style-type: lower-roman;
+		}
+			.prva-lista li:nth-child(2n) {
+    	transform: scale(1.1);
+    	color: #cb80fa;
+   		transition: all 0.4s ease;
+}
+
+
+		.druga-lista {
+  font-family: 'Bitcount Grid Single';
+  font-size: 200%; 
+  line-height: 170%;
+		}
+		
+    
+
+	table {
+		 background: linear-gradient(135deg, #cb80fa, #511e70);
+		border: 3px white dashed;
+		border-collapse: collapse;
+		padding: 25%;
+		align-content: center;
+		margin: 0 auto;
+		border-radius: 80px 80px 80px 5px;
+	}
+
+	#tablica table tr td:nth-child(5) {
+    	background: linear-gradient(45deg, #cb80fa, #511e70);
+	}	
+
+	table:hover {
+		transform: scale(.95, 1) skewX(-3deg);
+		transition: transform 0.4s ease-in-out;
+	}
+	
+
+th, td {
+    background-color: transparent;
+    vertical-align: middle;
+}
+
+iframe {
+	size: 20%;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+    width: 60%;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: 'Josefin Sans';
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+}
+
+
+h1 {
+    position: relative;
+    top: 10px;
+}
+
+	th, td {
+		font-family: 'Arial';
+		text-align: center;
+		border: 1px solid #511e70;
+		padding: 10px;
+	}
+	
+	.manji_tekst {
+		font-size: 75%;
+		font-style: italic;
+	}
+	
+
+	p { font-family: 'Schibsted Grotesk'; }
+	
+	
+	h1 {
+	font-family: 'Josefin Sans';
+	font-size:250px;
+	text-align: center;
+	text-shadow:3px 4px 2px #13031d;
+	}
+
+	h1:active {
+		transform: scale(1.02);
+		transition: transform 0.6s ease;
+	}
+	
+	 h2 {
+	font-family: Bitcount Grid Single;
+	font-size: 100px;
+	}
+
+	h3 {
+	font-family: 'Josefin Sans';
+	font-size:150px;
+	text-shadow:3px 5px 10px #13031d;
+	}
+
+	#d1 {
+		position: relative;
+		padding: 80px 0;
+	}
+
+	#d1 h1 {
+		text-align: center;
+	}
+
+	#d1 h2 {
+		text-align: center;
+	}
+
+	#d1 h3 {
+		text-align: left;
+	}
+
+	#mini-tag {
+  		position: absolute;
+  		top: 20px;
+  		right: 40px;
+  		background: #FCEFFF;
+  		color: #511e70;
+  		padding: 10px 20px;
+ 		border-radius: 10px;
+		font-family: 'Josefin Sans';
+  		font-weight: bold;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+	 #mini-tag:hover {
+	transform: translateY(-5px);
+	box-shadow: 10px 10px 17px #13031d;
+  }
+
+	#uvod {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	#interesi-wrapper {
+		width: 80%;
+		margin: 40px auto;
+	}
+
+	#interesi-lista, #teme-lista {
+		float: left;
+		width: 40%;
+	}
+
+				#teme-lista {
+					margin-left: 5%;
+				}
+	
+
+	#interesi-lista h3:hover {
+		animation: h3-interesi 0.3s ease-in-out;
+	}
+
+	#interesi-lista .prva-lista li:first-child ~ li {
+    opacity: 0.9;
+}
+
+	@keyframes h3-interesi {
+		0% {transform: rotate(0) scale(1); }
+		50% {transform: rotate(-2deg) scale(1.03);}
+		100% {transform: rotate(0) scale(1);}
+	}
+
+	#teme-lista h3:hover {
+		animation: h3-teme 0.3s ease-in-out;
+	}
+
+	@keyframes h3-teme {
+		0% {transform: rotate(0) scale(1); }
+		50% {transform: rotate(2deg) scale(1.03);}
+		100% {transform: rotate(0) scale(1);}
+	}
+
+
+
+	#forma-wrapper {
+		width: 70%;
+		margin: 60px auto;
+	}
+
+	#raspored-wrapper {
+		width: 90%;
+		margin: 50px auto;
+	}
+
+	button:hover {
+  background-color: #511e70;
+  color: #FCEFFF;
+  transform: scale(1.01); 
+  box-shadow: 0 0 15px #FCEFFF;
+}
+
+	button:active {
+		transform: scale(0.96);
+	}
+
+audio {
+	width: 20%;
+	margin: auto 40%;
+	position: relative;
+	color: #cb80fa;
+
+	box-shadow: 
+		0px 10px 17px #13031d,
+		0px 0px 12px #FCEFFF;
+
+	animation: audio-animacija 2.5s ease-in-out forwards;
+}
+
+@keyframes audio-animacija {
+	0% {transform: translateY(0); filter: hue-rotate(0deg);}
+	40% {transform: translateY(-8px); filter: hue-rotate(35deg);}
+	100% {transform: translateY(-25px); filter: hue-rotate(80deg);}
+}
+
+
+
+/* RWD- prilagodba velicine*/
+@media (max-width: 768px) {
+
+  #d1 { padding: 40px 0; }
+
+  #mini-tag {
+    top: 10px;
+    right: 10px;
+    padding: 5px 12px;
+  }
+
+  h1 { font-size: 90px; }
+  h3 { font-size: 55px; }
+  h2 { font-size: 40px; }
+
+  #uvod { width: 90%; font-size: 1.1rem; }
+
+  #interesi-lista, #teme-lista {
+    float: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .druga-lista { font-size: 150%; }
+
+  #forma-wrapper { width: 95%; }
+
+  input, textarea, select { width: 95%; }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  video {
+  width: 90%;
+  max-width: 560px;
+}
+.video-wrapper img {
+  width: 90%;
+  max-width: 560px;
+}
+
+audio {
+  width: 90%;
+  margin: 20px auto;
+}
+
+}
+
+.video-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-wrapper img,
+video {
+	transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in;
+}
+
+.video-wrapper img:hover,
+video:hover {
+	transform: scale(0.9);
+	box-shadow: 0px 20px 35px #13031d;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+  </style>
+</head>
+<body>
+
+  
+	<div id="d1">
+ 	 <div id="mini-tag">
+		<a href="https://moodle.srce.hr/2025-2026/course/view.php?id=258512" >
+			MMK1
+		</a>
+	</div>
+
+ 	 <h1><i>Mirna Vidović</i></h1>
+
+ 	 <h3><i>Kolegij Multimedijske komunikacije 1</i></h3>
+  	<h2>Bok!</h2>
+	</div>
+
+	<audio controls autoplay loop>
+	<source src="himna.mp3" type="audio/mp3" >
+		</audio>
+
+
+	
+	<div id="uvod">
+  		<p>Ja sam Mirna! <br>
+    	Druga sam godina <i>Grafičkog fakulteta u Zagrebu</i>. Sreća za Vas, 
+    	jer inače ne bi imali gdje ovo pročitati.</p>
+
+  		<p>Ova web stranica trenutno sadržava jako malo informativnog sadržaja, 
+    	ponajviše zbog nedavno dodanog podatka o meni, a to je da sam 
+    	<sup>neodlučna</sup>.<br>
+    	Dok stranica ne poprimi svoj završni oblik i konkretnu tematiku, pogledajte neke od mojih interesa i napredak vizualnih elemenata;</p>
+	</div>
+
+	<video controls loop src="slike/tehno25.mp4" poster="slike/thumbnail.jpg" style="width: 25%; border-radius: 10px; 
+				display: block; margin: 0 auto;" >
+	</video>
+	<p style="text-align:center; font-family:'Josefin Sans'; color:#FCEFFF;">
+			Tehnologijada 2025. (ženska futsal ekipa - 1. mjesto)
+  		</p>
+		
+		
+	
+	<div id="interesi-wrapper">
+		<div id="interesi-lista">
+		<h3 style="font-size: 100px;">Interesi</h3>
+		<ol class="prva-lista">
+  			<li>treniram rukomet 11 godina</li>
+			<li>volim Marvel filmove</li>
+			<li>igram za žensku futsal ekipu fakulteta</li>
+			<li>imam velik interes za psihologiju i anatomiju</li>
+			<li>Illustrator mi je najdraže "<ins>novo otkriće</ins>" od dolaska na fakultet</li>
+			<li>volim čitati knjige</li>
+			<li>najdraže su mi <strong><span style="color: rgb(0, 0, 0);">crna</span></strong> i <strong><span style="color: rgba(186, 107, 255, 0.866);">ljubičasta (lavanda)</span></strong> boja </li>
+			<li>imam problematična koljena</li>
+		</ol>
+		<br>
+
+	    <div class="video-wrapper">	
+		<a href="https://www.youtube.com/@HomeofHandball/videos" target="_blank">
+   			 <img src="https://i.ytimg.com/vi/Dr0LhKsYtmg/hqdefault.jpg"
+        		 alt="Home of Handball kanal na YouTube-u"
+         		style="width:100%; max-width:560px; aspect-ratio:16/9; border-radius:10px; display:block; margin:0 auto;">
+ 		 </a>
+ 		 <p style="text-align:center; font-family:'Josefin Sans'; color:#FCEFFF;">
+			EHF - Home of Handball
+  		</p>
+		</div>
+		<br>
+
+
+		<div class="video-wrapper">	
+		<a href="https://www.youtube.com/watch?v=Xu-QfE_1ksk" target="_blank">
+    <img src="https://img.youtube.com/vi/Xu-QfE_1ksk/hqdefault.jpg" 
+         alt="Video preview" 
+         class="video-thumb"
+		style="width:100%; max-width:560px; border-radius:10px; display:block; margin:0 auto;">
+		</a>
+		<p style="text-align:center; font-family:'Josefin Sans'; color:#FCEFFF;">
+			The science of laughter (Youtube)
+  		</p>
+		</div>
+		<br>
+
+		
+
+		</div>
+
+		<div id="teme-lista">
+			<h3 style="font-size: 100px; text-decoration: overline;">Potencijalne teme za projektni zadatak</h3>
+			<ul type="circle" class="druga-lista">
+  			<li>Hrvatska rukometna reprezentacija</li>
+			<li>RK Podravka</li>
+			<li>3D animacija u filmovima</li>
+			<li>Porijeklo tetovaža</li>
+			<li>Trešnjevka</li>
+		</ul>
+
+		 <div class="video-wrapper">	
+		<iframe src="https://www.youtube.com/embed/jODrVofka54?si=3XEWTpb5V96SjgYY&amp;start=6"  frameborder="0" 
+			style="width:100%; aspect-ratio:16/9; border:0;" 
+			allowfullscreen > 
+		</iframe>
+ 	
+		</div>
+		<br>
+
+		</div>
+
+		<div class="clearfix"></div>
+		</div>
+
+
+
+	<!--forma za ispunjavanje-->
+	<div id="forma-wrapper">
+	<h3 style="font-size: 100px; text-decoration: overline;">Kontakt forma</h3>
+
+<form action="#" method="get">
+  <fieldset style="border: 3px solid #FCEFFF; padding: 20px; border-radius: 20px;">
+    <legend style="font-family: 'Josefin Sans'; font-size: 40px;">Pošalji poruku</legend>
+
+    <label for="ime">Ime i prezime:</label><br>
+    <input type="text" id="ime" name="ime" size="30" placeholder="Upiši svoje ime i prezime" style="width: 60%; padding: 8px; border-radius: 10px; font-family: 'Josefin Sans'"><br><br>
+
+	<label for="spol" style="text-align: left;">Odaberi:</label><br>
+	<input type="radio" name="spol"  style="width: 10%;" value="zensko">žena<br><br>
+	<input type="radio" name="spol"  style="width: 10%;" value="musko">muškarac<br><br>
+	<input type="radio" name="spol"  style="width: 10%;" value="nista">ne želim reći<br><br>
+
+    <label for="email">Email adresa:</label><br>
+    <input type="email" id="email" name="email" size="30" placeholder="tvojmail@email.com" style="width: 60%; padding: 8px; border-radius: 10px; font-family: 'Josefin Sans';"><br><br>
+
+    <label for="web">Web stranica:</label><br>
+    <input type="url" placeholder="Upiši svoju web stranicu ili stranicu za koju smatraš da je dobro uređena" style="width: 60%; padding: 8px; border-radius: 10px; font-family: 'Josefin Sans'"><br><br>
+	
+	<label for="tema">Odaberi preferiranu temu stranice:</label><br>
+    <select id="tema" name="tema" style="width: 62%; padding: 8px; border-radius: 10px; font-family: 'Josefin Sans'">
+      <option value="rukomet">Rukomet</option>
+      <option value="tetovaže">Filmovi</option>
+      <option value="psihologija">Psihologija</option>
+      <option value="grafika">Grafički dizajn</option>
+      <option value="ostalo">Ostalo</option>
+    </select><br><br>
+
+   
+	Najdraža boja:
+	<input type="color" name="boja" value="#511e70"> <br><br>
+
+
+    <label for="poruka">Poruka:</label><br>
+    <textarea rows="3" cols="50" style="font-family: 'Josefin Sans'">
+		Upišite kratku poruku
+	</textarea><br><br>
+
+    <button type="submit" onclick="alert('Promjene su unešene :D')" style="background-color: #FCEFFF; color: #511e70; font-family: 'Josefin Sans'; padding: 10px 20px; border-radius: 20px; font-size: 20px; border: none; cursor: pointer;
+  transition: all 0.4s ease;">
+      Pošalji
+	</button>
+	<button type="reset" style="background-color: #511e70; color: #FCEFFF; font-family: 'Josefin Sans'; padding: 10px 20px; border-radius: 20px; font-size: 20px; border: none; cursor: pointer;
+  transition: all 0.4s ease;">
+      Poništi
+	</button>
+  </fieldset>
+</form>
+	</div>
+<br>
+<br>
+
+
+	<!--tablica-->
+	<div id="tablica">
+	<table>
+		<tr>
+			<th colspan="6">
+				MOJ RASPORED
+			</th>
+
+		</tr>
+		<tr>
+			<th></th>
+			<th>PONEDJELJAK</th>
+			<th>UTORAK</th>
+			<th>SRIJEDA</th>
+			<th>ČETVRTAK</th>
+			<th>PETAK</th>	
+		</tr>
+		 <tr>
+    		<th>08:00-09:35</th>
+    		<td>ViS SEM<br><span class="manji_tekst">dvorana B</span> </td>
+    		<td>ViS <br><span class="manji_tekst">dvorana A</span></td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+  			</tr>
+
+		<tr>
+    		<th>09:50-11:25</th>
+    		<td> </td>
+    		<td>Komunikologija <br><span class="manji_tekst">dvorana A</span></td>
+			<td>Komunikologija S3 <br> <span class="manji_tekst">dvorana C</span></td>
+			<td>Grafički strojevi S3 <br> <span class="manji_tekst">dvorana B</span></td>
+			<td> </td>
+  			</tr>
+
+		<tr>
+    		<th>11:40-13:15</th>
+    		<td>RF V4<br><span class="manji_tekst">3. kat</span></td>
+    		<td>Engleski u struci 3 <br> <span class="manji_tekst">vijećnica</span></td>
+			<td> </td>
+			<td>Reprodukcijska fotografija <br> <span class="manji_tekst">dvorana A</span></td>
+			<td>Osnove RiP V9 </td>
+  			</tr>
+
+		<tr>
+    		<th>13:30-15:05</th>
+    		<td> </td>
+    		<td> </td>
+			<td> </td>
+			<td>Tiskovne forme <br> <span class="manji_tekst">dvorana A</span></td>
+			<td>MMK <br><span class="manji_tekst">dvorana A</span></td>
+  			</tr>
+
+		<tr>
+    		<th>15:20-16:55</th>
+    		<td>Tiskovne forme V20<br><span class="manji_tekst">3. kat</span></td>
+    		<td> </td>
+			<td> </td>
+			<td>Osnove RiP <br><span class="manji_tekst">dvorana A</span> </td>
+			<td>MMK V7</td>
+  			</tr>
+
+		<tr>
+    		<th>17:10-18:45</th>
+    		<td> </td>
+    		<td> </td>
+			<td> </td>
+			<td>Grafički strojevi <br><span class="manji_tekst">dvorana A</span></td>
+			<td> </td>
+  			</tr>
+	</table>
+	</div>
+
+	<br>
+
+	<!--link za datoteku-->
+	<br>
+	 <object 
+        data="object/raspored.xlsx" 
+        style="text-align: center; font-family: Josefin Sans;"
+        width="100%" 
+        height="600px" 
+        style="border: 3px solid #511e70; border-radius: 20px;">
+       
+		<div style = "text-align: center; border-radius: 10px;" >
+		Excel tabela nije dostupna :/ 
+		<div style="background-color: #cb80fa; display: inline-block; padding: 5px; border-radius: 10px;" >
+       <a href="object/raspored.xlsx" style="text-align:center;" >Preuzmite datoteku</a>.
+		</div>
+		</div>
+    </object>
+
+	
+		
+		
+</body>
+</html>
