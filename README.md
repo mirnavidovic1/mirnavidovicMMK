@@ -1,1 +1,1 @@
-Mirna Vidovič - kolegij Multimedijske komunikacije 1
+Mirna Vidović - kolegij Multimedijske komunikacije 1
