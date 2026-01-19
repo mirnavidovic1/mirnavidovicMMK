@@ -347,6 +347,7 @@ audio {
 .video-wrapper {
     position: relative;
     overflow: hidden;
+	perspective: 800px;
 }
 
 .video-wrapper img,
@@ -356,8 +357,9 @@ video {
 
 .video-wrapper img:hover,
 video:hover {
-	transform: scale(0.9);
+	transform: scale(0.9) rotateY(15deg);
 	box-shadow: 0px 20px 35px #13031d;
+	backface-visibility: hidden;
 }
 
 .clearfix::after {
@@ -636,4 +638,5 @@ video:hover {
 </body>
 
 </html>
+
 
