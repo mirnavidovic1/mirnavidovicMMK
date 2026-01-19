@@ -73,14 +73,20 @@
 		border-radius: 80px 80px 80px 5px;
 	}
 
+	#tablica {
+		perspective: 1250px;
+	}
+
 	#tablica table tr td:nth-child(5) {
     	background: linear-gradient(45deg, #cb80fa, #511e70);
-		perspective: 1250px
 	}	
 
-	table:hover {
-		transform: scale(.95, 1) skewX(-3deg);
+	table {
 		transition: transform 0.4s ease-in-out;
+		transform-style: preserve -3d;
+	}
+
+	table:hover {
 		transform: rotateX(8deg) rotateY(-8deg) scale(0.95)
 	}
 	
@@ -630,3 +636,4 @@ video:hover {
 </body>
 
 </html>
+
