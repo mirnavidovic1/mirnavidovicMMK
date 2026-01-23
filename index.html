@@ -345,10 +345,11 @@ audio {
 }
 
 .video-wrapper {
-    position: relative;
-    overflow: hidden;
-	perspective: 800px;
+  position: relative;
+  overflow: visible;
+  perspective: 800px;
 }
+
 
 .video-wrapper img,
 video {
@@ -373,6 +374,14 @@ video:hover {
 	perspective: 1000px;
 	transform-style: preserve-3d;
 }
+
+	.video-caption {
+  text-align: center;
+  font-family: 'Josefin Sans';
+  color: #FCEFFF;
+  margin-top: 6px;
+}
+
 
 .flip-link img {
 	position: absolute;
@@ -471,15 +480,24 @@ video:hover {
 		<br>
 
 	    <div class="video-wrapper">	
-		<a href="https://www.youtube.com/@HomeofHandball/videos" target="_blank" class="flip-link">
-   			 <img src="https://i.ytimg.com/vi/Dr0LhKsYtmg/hqdefault.jpg"
-				 class="front"
-        		 alt="Home of Handball kanal na YouTube-u"
-			<img src="slike/ehf-backface.jpg" class="back"
- 		 </a>
- 		 <p style="text-align:center; font-family:'Josefin Sans'; color:#FCEFFF;">
-			EHF - Home of Handball
-  		</p>
+		<a href="https://www.youtube.com/@HomeofHandball/videos"
+   		target="_blank"
+   		class="flip-link">
+
+  		<img src="https://i.ytimg.com/vi/Dr0LhKsYtmg/hqdefault.jpg"
+       	class="front"
+       	alt="Home of Handball kanal na YouTube-u">
+
+  		<img src="slike/ehf-backface.jpg"
+       	class="back"
+       	alt="EHF backface">
+
+	</a>
+
+		<p class="video-caption">
+ 		 EHF – Home of Handball
+		</p>
+
 		</div>
 		<br>
 
@@ -681,6 +699,7 @@ video:hover {
 </body>
 
 </html>
+
 
 
 
